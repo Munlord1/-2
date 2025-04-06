@@ -1,0 +1,256 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Помощь программистам</title>
+    <link rel="stylesheet" href="styles.css">
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css">
+</head>
+<body class="dark-theme" data-lang="ru">
+    <!-- Прелоадер -->
+    <div id="preloader" class="preloader">
+        <div class="spinner"></div>
+    </div>
+
+    <!-- Прогресс-бар -->
+    <div id="scroll-progress" class="scroll-progress"></div>
+
+    <!-- Навигация -->
+    <nav class="navbar">
+        <div class="logo">CodeHelp</div>
+        <ul class="nav-links">
+            <li><a href="#lessons" data-lang-ru="Уроки" data-lang-en="Lessons">Уроки</a></li>
+            <li><a href="#tools" data-lang-ru="Инструменты" data-lang-en="Tools">Инструменты</a></li>
+            <li><a href="#community" data-lang-ru="Сообщество" data-lang-en="Community">Сообщество</a></li>
+            <li><a href="#blog" data-lang-ru="Блог" data-lang-en="Blog">Блог</a></li>
+        </ul>
+        <div class="lang-toggle">
+            <button id="lang-ru" class="lang-button active">RU</button>
+            <button id="lang-en" class="lang-button">EN</button>
+        </div>
+        <button id="theme-toggle">☀️</button>
+    </nav>
+
+    <!-- Главная секция -->
+    <section class="hero">
+        <img src="animepc.gif" alt="Anime Background" class="hero-gif" id="parallax-bg">
+        <div class="overlay"></div>
+        <div id="three-canvas"></div>
+        <div class="hero-content">
+            <h1 class="hero-title" data-lang-ru="Code Smarter, Not Harder" data-lang-en="Code Smarter, Not Harder"><span class="typewriter"></span></h1>
+            <p class="hero-subtitle" data-lang-ru="Ресурсы, уроки и инструменты для программистов" data-lang-en="Resources, lessons, and tools for programmers">Ресурсы, уроки и инструменты для программистов</p>
+            <button class="cta-button" data-lang-ru="Начать сейчас" data-lang-en="Get Started">Начать сейчас</button>
+        </div>
+    </section>
+
+    <!-- Частицы -->
+    <div id="particles-js"></div>
+
+    <!-- Поиск -->
+    <section class="search-section">
+        <input type="text" id="search-input" placeholder="Поиск по урокам и блогу..." data-lang-ru="Поиск по урокам и блогу..." data-lang-en="Search lessons and blog...">
+    </section>
+
+    <!-- Уроки -->
+    <section id="lessons" class="section lessons">
+        <h2 class="section-title"><i class="fas fa-book"></i> <span data-lang-ru="Уроки" data-lang-en="Lessons">Уроки</span></h2>
+        <div class="tabs">
+            <div class="tab-header">
+                <button class="tab-button active" data-tab="html-css">HTML & CSS</button>
+                <button class="tab-button" data-tab="javascript">JavaScript</button>
+                <button class="tab-button" data-tab="python">Python</button>
+            </div>
+            <div class="tab-content">
+                <div id="html-css" class="tab-pane active">
+                    <div class="accordion">
+                        <button class="accordion-button" data-lang-ru="Введение в HTML5" data-lang-en="Introduction to HTML5">Введение в HTML5</button>
+                        <div class="accordion-content">
+                            <p data-lang-ru="HTML5 — это последняя версия языка разметки, которая добавляет новые семантические теги, такие как &lt;header&gt;, &lt;footer&gt;, &lt;article&gt; и &lt;section&gt;. В этом уроке вы узнаете, как структурировать веб-страницы, использовать встроенные медиа (видео и аудио) и создавать формы с новыми типами ввода, такими как email и date. Начните с базового шаблона:" data-lang-en="HTML5 is the latest version of the markup language, introducing new semantic tags like &lt;header&gt;, &lt;footer&gt;, &lt;article&gt;, and &lt;section&gt;. In this lesson, you’ll learn how to structure web pages, embed media (video and audio), and create forms with new input types like email and date. Start with this basic template:">HTML5 — это последняя версия языка разметки, которая добавляет новые семантические теги, такие как &lt;header&gt;, &lt;footer&gt;, &lt;article&gt; и &lt;section&gt;. В этом уроке вы узнаете, как структурировать веб-страницы, использовать встроенные медиа (видео и аудио) и создавать формы с новыми типами ввода, такими как email и date. Начните с базового шаблона:</p>
+                            <pre><code>&lt;!DOCTYPE html&gt;
+&lt;html lang="ru"&gt;
+&lt;head&gt;
+    &lt;meta charset="UTF-8"&gt;
+    &lt;title&gt;Моя первая страница&lt;/title&gt;
+&lt;/head&gt;
+&lt;body&gt;
+    &lt;header&gt;Шапка сайта&lt;/header&gt;
+    &lt;main&gt;Основной контент&lt;/main&gt;
+    &lt;footer&gt;Подвал&lt;/footer&gt;
+&lt;/body&gt;
+&lt;/html&gt;</code></pre>
+                            <a href="#" class="learn-more" data-lang-ru="Перейти к уроку" data-lang-en="Go to lesson">Перейти к уроку</a>
+                        </div>
+                        <button class="accordion-button" data-lang-ru="Стилизация с CSS3" data-lang-en="Styling with CSS3">Стилизация с CSS3</button>
+                        <div class="accordion-content">
+                            <p data-lang-ru="CSS3 позволяет создавать адаптивные дизайны, анимации и сложные эффекты. Вы узнаете, как использовать Flexbox и Grid для компоновки, добавлять переходы (transitions), анимации (@keyframes) и работать с медиа-запросами для мобильных устройств. Пример анимации кнопки:" data-lang-en="CSS3 enables responsive designs, animations, and complex effects. You’ll learn how to use Flexbox and Grid for layouts, add transitions, animations (@keyframes), and work with media queries for mobile devices. Here’s an example of a button animation:">CSS3 позволяет создавать адаптивные дизайны, анимации и сложные эффекты. Вы узнаете, как использовать Flexbox и Grid для компоновки, добавлять переходы (transitions), анимации (@keyframes) и работать с медиа-запросами для мобильных устройств. Пример анимации кнопки:</p>
+                            <pre><code>.button {
+    padding: 10px 20px;
+    background: #FF007A;
+    transition: transform 0.3s;
+}
+.button:hover {
+    transform: scale(1.1);
+}
+@keyframes pulse {
+    0% { transform: scale(1); }
+    50% { transform: scale(1.05); }
+    100% { transform: scale(1); }
+}</code></pre>
+                            <a href="#" class="learn-more" data-lang-ru="Примеры кода" data-lang-en="Code examples">Примеры кода</a>
+                        </div>
+                    </div>
+                </div>
+                <div id="javascript" class="tab-pane">
+                    <div class="accordion">
+                        <button class="accordion-button" data-lang-ru="Основы JS" data-lang-en="JS Basics">Основы JS</button>
+                        <div class="accordion-content">
+                            <p data-lang-ru="JavaScript — это язык программирования для интерактивных веб-страниц. В этом уроке вы изучите переменные (let, const), функции, условия (if/else), циклы (for, while) и работу с DOM. Вот пример функции для изменения текста:" data-lang-en="JavaScript is a programming language for interactive web pages. In this lesson, you’ll explore variables (let, const), functions, conditionals (if/else), loops (for, while), and DOM manipulation. Here’s an example function to change text:">JavaScript — это язык программирования для интерактивных веб-страниц. В этом уроке вы изучите переменные (let, const), функции, условия (if/else), циклы (for, while) и работу с DOM. Вот пример функции для изменения текста:</p>
+                            <pre><code>function changeText() {
+    let text = document.querySelector("p");
+    text.textContent = "Текст изменён!";
+}
+changeText();</code></pre>
+                            <p data-lang-ru="Также вы узнаете про массивы и методы вроде map, filter и reduce для обработки данных." data-lang-en="You’ll also learn about arrays and methods like map, filter, and reduce for data processing.">Также вы узнаете про массивы и методы вроде map, filter и reduce для обработки данных.</p>
+                            <a href="#" class="learn-more" data-lang-ru="Перейти к уроку" data-lang-en="Go to lesson">Перейти к уроку</a>
+                        </div>
+                    </div>
+                </div>
+                <div id="python" class="tab-pane">
+                    <div class="accordion">
+                        <button class="accordion-button" data-lang-ru="Основы Python" data-lang-en="Python Basics">Основы Python</button>
+                        <div class="accordion-content">
+                            <p data-lang-ru="Python — простой и мощный язык для начинающих и профессионалов. В этом уроке вы изучите синтаксис, переменные, списки, словари, функции и модули. Пример программы для подсчёта слов:" data-lang-en="Python is a simple yet powerful language for beginners and pros. In this lesson, you’ll cover syntax, variables, lists, dictionaries, functions, and modules. Here’s a word-counting program example:">Python — простой и мощный язык для начинающих и профессионалов. В этом уроке вы изучите синтаксис, переменные, списки, словари, функции и модули. Пример программы для подсчёта слов:</p>
+                            <pre><code>def count_words(text):
+    words = text.split()
+    return len(words)
+
+text = "Привет, как дела?"
+print(count_words(text))  # Вывод: 3</code></pre>
+                            <p data-lang-ru="Вы также узнаете, как использовать библиотеки вроде requests для работы с API." data-lang-en="You’ll also learn how to use libraries like requests to work with APIs.">Вы также узнаете, как использовать библиотеки вроде requests для работы с API.</p>
+                            <a href="#" class="learn-more" data-lang-ru="Начать" data-lang-en="Start">Начать</a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Инструменты -->
+    <section id="tools" class="section tools">
+        <h2 class="section-title"><i class="fas fa-tools"></i> <span data-lang-ru="Инструменты" data-lang-en="Tools">Инструменты</span></h2>
+        <div class="tools-grid">
+            <div class="tool-card" data-modal="code-generator">
+                <div class="tool-icon">⚙️</div>
+                <h3 data-lang-ru="Генератор кода" data-lang-en="Code Generator">Генератор кода</h3>
+                <p data-lang-ru="Создавайте готовые шаблоны кода для HTML, CSS и JS мгновенно. Подходит для быстрого старта проектов, прототипирования или обучения. Выберите тип проекта (например, лендинг или форма), и инструмент сгенерирует базовую структуру с комментариями." data-lang-en="Generate ready-made code templates for HTML, CSS, and JS instantly. Perfect for quick project starts, prototyping, or learning. Select a project type (e.g., landing page or form), and the tool will create a basic structure with comments.">Создавайте готовые шаблоны кода для HTML, CSS и JS мгновенно. Подходит для быстрого старта проектов, прототипирования или обучения. Выберите тип проекта (например, лендинг или форма), и инструмент сгенерирует базовую структуру с комментариями.</p>
+            </div>
+            <div class="tool-card" data-modal="debugger">
+                <div class="tool-icon">🛠️</div>
+                <h3 data-lang-ru="Дебаггер" data-lang-en="Debugger">Дебаггер</h3>
+                <p data-lang-ru="Инструмент для поиска ошибок в вашем коде. Вставьте код, и он выделит синтаксические ошибки, предложит исправления и покажет потенциальные логические проблемы. Поддерживает JS, Python и CSS с примерами типичных ошибок и их решений." data-lang-en="A tool to find bugs in your code. Paste your code, and it will highlight syntax errors, suggest fixes, and point out potential logic issues. Supports JS, Python, and CSS with examples of common mistakes and solutions.">Инструмент для поиска ошибок в вашем коде. Вставьте код, и он выделит синтаксические ошибки, предложит исправления и покажет потенциальные логические проблемы. Поддерживает JS, Python и CSS с примерами типичных ошибок и их решений.</p>
+            </div>
+            <div class="tool-card" data-modal="converter">
+                <div class="tool-icon">🔄</div>
+                <h3 data-lang-ru="Конвертер кода" data-lang-en="Code Converter">Конвертер кода</h3>
+                <p data-lang-ru="Переводите код между языками программирования: JS в Python, Python в JS и другие комбинации. Инструмент автоматически адаптирует синтаксис, сохраняя логику. Полезно для изучения языков или миграции проектов." data-lang-en="Convert code between programming languages: JS to Python, Python to JS, and more. The tool automatically adjusts syntax while preserving logic. Great for learning languages or migrating projects.">Переводите код между языками программирования: JS в Python, Python в JS и другие комбинации. Инструмент автоматически адаптирует синтаксис, сохраняя логику. Полезно для изучения языков или миграции проектов.</p>
+            </div>
+            <div class="tool-card pomodoro-card">
+                <div class="tool-icon">⏱️</div>
+                <h3 data-lang-ru="Таймер Помодоро" data-lang-en="Pomodoro Timer">Таймер Помодоро</h3>
+                <p data-lang-ru="Увеличьте продуктивность с техникой Помодоро: 25 минут работы и 5 минут отдыха. Таймер уведомляет о смене фазы и помогает сосредоточиться. Настраивайте время под свои нужды." data-lang-en="Boost productivity with the Pomodoro technique: 25 minutes of work and 5 minutes of rest. The timer alerts you to phase changes and helps you stay focused. Customize the time to suit your needs.">Увеличьте продуктивность с техникой Помодоро: 25 минут работы и 5 минут отдыха. Таймер уведомляет о смене фазы и помогает сосредоточиться. Настраивайте время под свои нужды.</p>
+                <div id="pomodoro-timer" class="pomodoro-timer">25:00</div>
+                <button id="pomodoro-start" class="pomodoro-button" data-lang-ru="Старт" data-lang-en="Start">Старт</button>
+                <button id="pomodoro-reset" class="pomodoro-button" data-lang-ru="Сброс" data-lang-en="Reset">Сброс</button>
+            </div>
+            <div class="tool-card code-counter-card">
+                <div class="tool-icon">📏</div>
+                <h3 data-lang-ru="Калькулятор кода" data-lang-en="Code Counter">Калькулятор кода</h3>
+                <p data-lang-ru="Подсчитайте количество строк, символов и слов в вашем коде. Полезно для оценки объёма работы или анализа сложности проекта. Просто вставьте код в поле ниже." data-lang-en="Count the number of lines, characters, and words in your code. Useful for estimating workload or analyzing project complexity. Just paste your code into the field below.">Подсчитайте количество строк, символов и слов в вашем коде. Полезно для оценки объёма работы или анализа сложности проекта. Просто вставьте код в поле ниже.</p>
+                <textarea id="code-input" placeholder="Вставьте код сюда..." data-lang-ru="Вставьте код сюда..." data-lang-en="Paste your code here..."></textarea>
+                <p id="code-lines" data-lang-ru="Строк: 0" data-lang-en="Lines: 0">Строк: 0</p>
+            </div>
+            <div class="tool-card color-generator-card">
+                <div class="tool-icon">🎨</div>
+                <h3 data-lang-ru="Генератор цвета" data-lang-en="Color Generator">Генератор цвета</h3>
+                <p data-lang-ru="Генерируйте случайные HEX-цвета для дизайна. Каждый клик создаёт новый цвет с предварительным просмотром. Копируйте код цвета одним нажатием для использования в CSS." data-lang-en="Generate random HEX colors for design. Each click creates a new color with a preview. Copy the color code with one click for use in CSS.">Генерируйте случайные HEX-цвета для дизайна. Каждый клик создаёт новый цвет с предварительным просмотром. Копируйте код цвета одним нажатием для использования в CSS.</p>
+                <div id="color-box" class="color-box"></div>
+                <button id="generate-color" class="pomodoro-button" data-lang-ru="Сгенерировать" data-lang-en="Generate">Сгенерировать</button>
+            </div>
+        </div>
+    </section>
+
+    <!-- Сообщество -->
+    <section id="community" class="section community">
+        <h2 class="section-title"><i class="fas fa-users"></i> <span data-lang-ru="Сообщество" data-lang-en="Community">Сообщество</span></h2>
+        <div class="community-content">
+            <p data-lang-ru="Присоединяйтесь к нашему сообществу из более чем 500 разработчиков! Здесь вы найдёте единомышленников, сможете делиться опытом, задавать вопросы и участвовать в совместных проектах. Мы организуем хакатоны, код-ревью и обсуждения новых технологий." data-lang-en="Join our community of over 500 developers! Here, you’ll find like-minded people, share experiences, ask questions, and collaborate on projects. We host hackathons, code reviews, and discussions on new technologies.">Присоединяйтесь к нашему сообществу из более чем 500 разработчиков! Здесь вы найдёте единомышленников, сможете делиться опытом, задавать вопросы и участвовать в совместных проектах. Мы организуем хакатоны, код-ревью и обсуждения новых технологий.</p>
+            <button class="cta-button" data-lang-ru="Вступить" data-lang-en="Join">Вступить</button>
+            <h3 data-lang-ru="Мои GitHub репозитории" data-lang-en="My GitHub Repositories">Мои GitHub репозитории</h3>
+            <div id="github-repos" class="github-repos"></div>
+        </div>
+    </section>
+
+    <!-- Блог -->
+    <section id="blog" class="section blog">
+        <h2 class="section-title"><i class="fas fa-blog"></i> <span data-lang-ru="Блог" data-lang-en="Blog">Блог</span></h2>
+        <div class="blog-grid">
+            <div class="blog-card" data-search="советы разработка tips development">
+                <img src="https://via.placeholder.com/300x150" alt="Советы" class="blog-thumbnail">
+                <h3 data-lang-ru="10 советов по ускорению разработки" data-lang-en="10 Tips to Speed Up Development">10 советов по ускорению разработки</h3>
+                <p data-lang-ru="Узнайте, как ускорить процесс разработки с помощью автоматизации, горячих клавиш и правильной организации кода. Например, используйте шаблонизаторы (Pug, Handlebars), настройте автосохранение в IDE и применяйте snippets для повторяющихся кусков кода. Мы разберём каждый совет с примерами и инструментами, такими как VS Code и Git." data-lang-en="Learn how to speed up development with automation, hotkeys, and proper code organization. For example, use templating engines (Pug, Handlebars), set up autosave in your IDE, and apply snippets for repetitive code. We’ll break down each tip with examples and tools like VS Code and Git.">Узнайте, как ускорить процесс разработки с помощью автоматизации, горячих клавиш и правильной организации кода. Например, используйте шаблонизаторы (Pug, Handlebars), настройте автосохранение в IDE и применяйте snippets для повторяющихся кусков кода. Мы разберём каждый совет с примерами и инструментами, такими как VS Code и Git.</p>
+                <a href="#" class="read-more" data-lang-ru="Читать" data-lang-en="Read">Читать</a>
+            </div>
+            <div class="blog-card" data-search="python обучение python learning">
+                <img src="https://via.placeholder.com/300x150" alt="Python" class="blog-thumbnail">
+                <h3 data-lang-ru="Как освоить Python за месяц" data-lang-en="How to Master Python in a Month">Как освоить Python за месяц</h3>
+                <p data-lang-ru="Пошаговый план для новичков: от установки Python до создания первого проекта. Вы узнаете про базовые конструкции, работу с файлами, библиотеки (pandas, requests) и основы ООП. Включает практические задачи, такие как парсинг сайта или анализ данных из CSV." data-lang-en="A step-by-step plan for beginners: from installing Python to building your first project. You’ll learn basic constructs, file handling, libraries (pandas, requests), and OOP basics. Includes practical tasks like web scraping or CSV data analysis.">Пошаговый план для новичков: от установки Python до создания первого проекта. Вы узнаете про базовые конструкции, работу с файлами, библиотеки (pandas, requests) и основы ООП. Включает практические задачи, такие как парсинг сайта или анализ данных из CSV.</p>
+                <a href="#" class="read-more" data-lang-ru="Читать" data-lang-en="Read">Читать</a>
+            </div>
+        </div>
+    </section>
+
+    <!-- Подвал -->
+    <footer class="footer">
+        <h2 class="section-title"><i class="fas fa-envelope"></i> <span data-lang-ru="Обратная связь" data-lang-en="Feedback">Обратная связь</span></h2>
+        <form id="feedback-form">
+            <input type="text" name="name" placeholder="Ваше имя" data-lang-ru="Ваше имя" data-lang-en="Your name" required>
+            <textarea name="message" placeholder="Ваше сообщение" data-lang-ru="Ваше сообщение" data-lang-en="Your message" required></textarea>
+            <button type="submit" class="cta-button" data-lang-ru="Отправить" data-lang-en="Send">Отправить</button>
+        </form>
+        <div id="success-message" class="success-message">
+            <i class="fas fa-check-circle"></i> <span data-lang-ru="Сообщение отправлено!" data-lang-en="Message sent!">Сообщение отправлено!</span>
+        </div>
+        <div class="social-links">
+            <a href="#" class="social-icon"><i class="fab fa-twitter"></i></a>
+            <a href="#" class="social-icon"><i class="fab fa-github"></i></a>
+            <a href="#" class="social-icon"><i class="fab fa-discord"></i></a>
+        </div>
+        <div class="weather-widget">
+            <p id="weather" data-lang-ru="Погода: Загрузка..." data-lang-en="Weather: Loading...">Погода: Загрузка...</p>
+        </div>
+        <p id="visitor-count" data-lang-ru="Посетителей: 0" data-lang-en="Visitors: 0">Посетителей: 0</p>
+        <p class="footer-text" data-lang-ru="© 2025 CodeHelp. Все права защищены." data-lang-en="© 2025 CodeHelp. All rights reserved.">© 2025 CodeHelp. Все права защищены.</p>
+    </footer>
+
+    <!-- Кнопка "Наверх" -->
+    <button id="scroll-top" class="scroll-top"><i class="fas fa-arrow-up"></i></button>
+
+    <!-- Модальное окно -->
+    <div id="modal" class="modal">
+        <div class="modal-content">
+            <span id="modal-close" class="modal-close">×</span>
+            <h3 id="modal-title"></h3>
+            <p id="modal-text"></p>
+        </div>
+    </div>
+
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/three.js/r134/three.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.11.4/gsap.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.11.4/ScrollTrigger.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/particles.js@2.0.0/particles.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/canvas-confetti@1.6.0/dist/confetti.browser.min.js"></script>
+    <script src="script.js"></script>
+</body>
+</html>
